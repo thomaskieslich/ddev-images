@@ -25,9 +25,10 @@ RUN c_rehash
 ### DDEV-Live's PHP image
 ### TODO: See if we want to just build with a single PHP version or as now with all of them.
 FROM base AS ddev-php-base
-ARG PHP_DEFAULT_VERSION="7.3"
+ARG PHP_DEFAULT_VERSION="7.4"
 ENV DDEV_PHP_VERSION=$PHP_DEFAULT_VERSION
-ENV PHP_VERSIONS="php5.6 php7.0 php7.1 php7.2 php7.3 php7.4 php8.0"
+# ENV PHP_VERSIONS="php5.6 php7.0 php7.1\ php7.2 php7.3 php7.4 php8.0"
+ENV PHP_VERSIONS="php7.4"
 ENV PHP_INI=/etc/php/$PHP_DEFAULT_VERSION/fpm/php.ini
 ENV WWW_UID=33
 ENV YQ_VERSION=2.4.1
